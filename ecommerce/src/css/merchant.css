@@ -1,0 +1,309 @@
+
+.new-user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .new-user-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .new-user-form {
+    width: 100%;
+  }
+  
+  .new-user-form .MuiTextField-root {
+    margin-bottom: 20px;
+  }
+  
+  .new-user-gender, .new-user-status {
+    margin-bottom: 20px;
+  }
+  
+  .new-user-save-btn {
+    background-color: #00cc99;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .new-user-save-btn:hover {
+    background-color: #009977;
+  }
+
+  .product-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các input */
+    max-width: 900px; /* Kích thước tối đa của form */
+    margin: auto; /* Căn giữa form */
+  }
+  
+  input, textarea {
+    width: 100%; /* Đặt chiều rộng 100% cho các input */
+    padding: 10px; /* Thêm padding để tạo khoảng cách */
+    font-size: 15px; /* Tăng kích thước chữ */
+    border: 1px solid #ccc; /* Đặt viền cho input */
+    border-radius: 4px; /* Bo tròn góc */
+  }
+  
+  .createBook {
+    padding: 10px; /* Thêm padding cho button */
+    font-size: 16px; /* Tăng kích thước chữ cho button */
+    background-color: #007BFF; /* Màu nền cho button */
+    color: white; /* Màu chữ cho button */
+    border: none; /* Bỏ viền */
+    border-radius: 4px; /* Bo tròn góc cho button */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+  }
+  
+  .createBook:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+  }
+
+  .update-book__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .update-book__header {
+    color: #333;
+    text-align: center;
+  }
+  
+  .update-book__form-group {
+    margin-bottom: 20px;
+  }
+  
+  .update-book__input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .update-book__input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .update-book__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .update-book__button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .update-book__button:hover {
+    background-color: #45a049;
+  }
+  
+  .update-book__error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .update-book__list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .update-book__list-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .update-book__list-item h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  .update-book__edit-button {
+    padding: 6px 12px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .update-book__edit-button:hover {
+    background-color: #1976D2;
+  }
+
+  .promotion-manage {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .promotion-manage__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .promotion-manage__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .promotion-manage__input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .promotion-manage__button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .promotion-manage__button:hover {
+    background-color: #0056b3;
+  }
+  
+  .promotion-manage__error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .promotion-manage__list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .promotion-manage__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .promotion-manage__item-title {
+    font-size: 18px;
+  }
+  
+  .promotion-manage__edit-button,
+  .promotion-manage__delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .promotion-manage__edit-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .promotion-manage__edit-button:hover {
+    background-color: #218838;
+  }
+  
+  .promotion-manage__delete-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .promotion-manage__delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  .text-success {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  
+  .like {
+    background: none; /* Không có nền */
+    border: none; /* Không có viền */
+    cursor: pointer; /* Hiển thị con trỏ chuột */
+    margin-left: 5px; /* Khoảng cách giữa chữ và biểu tượng trái tim */
+  }
+  .like svg {
+    width: 20px; /* Kích thước tùy chỉnh cho biểu tượng trái tim */
+    height: 20px;
+  }
+  .btn-bule {
+    background-color: #007bff; /* Màu nền (màu xanh dương) */
+    color: white; /* Màu chữ */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo góc cho nút */
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Hiển thị con trỏ chuột */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi di chuột */
+  }
+  .text-long {
+    display: -webkit-box;        /* Thiết lập cho Flexbox */
+    -webkit-line-clamp: 2;      /* Giới hạn số dòng hiển thị */
+    -webkit-box-orient: vertical; /* Đặt hướng của box thành dọc */
+    overflow: hidden;            /* Ẩn nội dung tràn */
+    text-overflow: ellipsis;     /* Hiện dấu ba chấm (...) */
+    height: 3em;                 /* Chiều cao tối đa cho hai dòng (có thể điều chỉnh) */
+    line-height: 1.5em;          /* Chiều cao dòng */
+  }
+  

@@ -1,0 +1,45 @@
+/* next page */
+.productPage .productListing {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .productPage .productListing .content {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+  
+  .showBy {
+    width: 100%;
+    height: 40px;
+    background: #e9f1f8;
+    border-radius: 5px;
+  }
+  
+  .showBySort button {
+    min-width: auto;
+    color: #000;
+  }
+  
+  .showBySort button svg {
+    color: #1f51f3;
+    margin-left: 5px;
+  }
+  
+  .showBySortDropdown .MuiPaper-root {
+    width: 20%;
+  }
+  
+  .productGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 sản phẩm mỗi hàng */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    margin-top: 20px; /* Khoảng cách phía trên nếu cần */
+  }
+  

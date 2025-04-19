@@ -1,0 +1,143 @@
+/* Order.css */
+.order-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary, .payment-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.book-image {
+    width: 50px; /* Kích thước hình ảnh */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Order.css */
+.order-table {
+    width: 100%;
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+    margin-top: 20px;
+}
+
+.order-table th, .order-table td {
+    border: 1px solid #e0e0e0; /* Viền nhẹ cho ô */
+    padding: 6px; /* Padding để nội dung không chèn lên nhau */
+    text-align: left; /* Căn trái nội dung */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+.order-table th {
+    background-color: #007bff; /* Màu nền cho tiêu đề bảng */
+    color: #ffffff; /* Màu chữ trắng cho tiêu đề */
+    font-weight: bold; /* Chữ đậm cho tiêu đề */
+    font-size: 16px; /* Kích thước chữ cho tiêu đề */
+}
+
+.order-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+}
+
+.order-table tr:hover {
+    background-color: #eaeaea; /* Màu nền khi hover */
+}
+
+.product-info {
+    display: flex;
+    align-items: center; /* Căn giữa hình ảnh và tên sách */
+}
+
+.book-image {
+    width: 50px; /* Kích thước hình ảnh */
+    height: auto; /* Giữ tỷ lệ của hình ảnh */
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và tên sách */
+}
+
+h5 {
+    margin-top: 20px; /* Khoảng cách trên cho tiêu đề phụ */
+    margin-bottom: 10px; /* Khoảng cách dưới cho tiêu đề phụ */
+    font-size: 20px; /* Kích thước chữ cho tiêu đề phụ */
+    color: #333; /* Màu chữ chính */
+}
+
+.total-section {
+    margin-top: 20px;
+    font-size: 16px; /* Kích thước chữ cho tổng số tiền */
+    font-weight: bold;
+    color: #ff4545; /* Màu chữ chính */
+}
+
+.payment-section {
+    margin-top: 20px; /* Khoảng cách trên cho phần thanh toán */
+    padding: 15px; /* Padding cho phần */
+    border: 1px solid #e0e0e0; /* Viền nhẹ */
+    border-radius: 8px; /* Bo tròn góc */
+    background-color: #f9f9f9; /* Màu nền sáng */
+}
+
+.payment-section h3 {
+    font-size: 18px; /* Kích thước chữ cho tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới cho tiêu đề */
+    color: #333; /* Màu chữ chính */
+}
+
+.payment-select {
+    width: 100%; /* Đặt chiều rộng thành 100% */
+    padding: 10px; /* Padding cho select */
+    border: 1px solid #ccc; /* Viền cho select */
+    border-radius: 5px; /* Bo tròn góc */
+    margin-bottom: 20px; /* Khoảng cách dưới cho select */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+.btn-payment {
+    background-color: #007bff; /* Màu nền nút */
+    color: white; /* Màu chữ nút */
+    padding: 12px 20px; /* Padding cho nút */
+    border: none; /* Bỏ viền */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    font-size: 16px; /* Kích thước chữ cho nút */
+    width: 30%; /* Chiều rộng nút 100% */
+}
+
+.btn-payment:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+.voucher-section {
+    margin-top: 20px;
+}
+
+.voucher-list {
+    list-style-type: none; /* Bỏ dấu chấm */
+    padding: 0; /* Bỏ padding */
+    margin-top: 5px; /* Khoảng cách trên cho danh sách */
+}
+
+.voucher-item {
+    padding: 8px; /* Padding cho từng item */
+    border: 1px solid #ddd; /* Viền nhẹ */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    margin-bottom: 5px; /* Khoảng cách giữa các voucher */
+}
+
+.voucher-item:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+}

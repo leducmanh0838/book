@@ -1,0 +1,29 @@
+.freeship-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .freeship-title {
+    font-size: 2.5rem;
+    color: #2bbef9;
+    margin-bottom: 20px;
+  }
+  
+  .freeship-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .freeship-terms {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 40px;
+  }
+  
+  .freeship-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

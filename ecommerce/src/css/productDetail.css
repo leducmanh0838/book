@@ -1,0 +1,159 @@
+/* Thông tin NXB, NCC, trang, ngày */
+.product-info {
+    margin-top: 15px;
+  }
+  
+  .product-info .info-item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .product-info .publisher-label {
+    font-weight: bold;
+    color: #007bff; /* Màu xanh cho label */
+  }
+  
+  .product-info .publisher-value {
+    color: #6c757d; /* Màu xám nhạt cho giá trị */
+  }
+  
+  .product-info img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Comment */
+  .comment-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .comment-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Khoảng cách giữa ô nhập và phần đánh giá */
+  }
+  
+  .comment-input textarea {
+    width: 100%;
+    height: 100px; /* Chiều cao cho ô nhập bình luận */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Không cho phép thay đổi kích thước */
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Đẩy phần đánh giá và nút submit sang bên phải */
+    margin-top: 10px; /* Khoảng cách phía trên cho phần đánh giá */
+  }
+  
+  .rating button {
+    margin-left: 10px;
+    background-color: #007bff; /* Màu xanh cho nút */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+  }
+  
+  .rating button:hover {
+    background-color: #0056b3; /* Màu khi hover */
+  }
+  
+  /* Comment của người dùng khác */
+  .comment-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Đảm bảo căn chỉnh về phía trái */
+  }
+  
+  .comment-user-icon {
+    width: 40px; /* Kích thước avatar */
+    height: 40px;
+    border-radius: 50%; /* Làm cho hình ảnh thành hình tròn */
+    margin-right: 10px; /* Khoảng cách giữa avatar và nội dung bình luận */
+  }
+  
+  .comment-content {
+    display: flex;
+    flex-direction: column; /* Để tên và bình luận xếp theo chiều dọc */
+  }
+  
+  .comment-user-name {
+    font-weight: bold; /* Để tên người dùng nổi bật hơn */
+    margin-bottom: 5px; /* Khoảng cách giữa tên và bình luận */
+  }
+  
+  /* Sign In */
+  .signInPage {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .signInPage::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(#79d8fe, #79d8fe);
+    opacity: 0.9;
+    z-index: -1;
+  }
+  
+  .signInPage .box {
+    width: 400px;
+    height: auto;
+    background: #fff;
+    margin: auto;
+  }
+  
+  .signInPage .box h2 {
+    font-size: 27px;
+    font-weight: 600;
+  }
+  
+  .custom-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; 
+    font-size: 2rem;   
+    color: #2500f6; 
+  }
+  
+  .signInPage .box form {
+    padding: 25px 30px;
+  }
+
+  .info-table {
+    width: 100%; /* Đặt chiều rộng của bảng 100% */
+    border-collapse: collapse; /* Để bỏ khoảng trống giữa các ô */
+    margin-top: 15px; /* Khoảng cách giữa bảng và các phần khác */
+  }
+  
+  .info-table .publisher-label {
+    font-weight: bold; /* Làm đậm chữ cho nhãn */
+    color: #007bff; /* Màu xanh cho nhãn */
+    padding: 8px; /* Padding cho ô */
+  }
+  
+  .info-table .publisher-value {
+    color: #6c757d; /* Màu xám nhạt cho giá trị */
+    padding: 8px; /* Padding cho ô */
+    text-align: left; /* Căn trái cho giá trị */
+    border-bottom: 1px solid #ddd; /* Đường viền dưới ô */
+  }
+  
+  .info-table tr:hover {
+    background-color: #f1f1f1; /* Hiệu ứng hover cho hàng */
+  }
+  

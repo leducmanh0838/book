@@ -1,0 +1,123 @@
+/* CSS cho sản phẩm */
+.productItem {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #ddd; /* Viền nhẹ cho sản phẩm */
+    border-radius: 8px; /* Bo tròn góc */
+    padding: 10px; /* Padding bên trong */
+    background-color: #fff; /* Màu nền trắng cho sản phẩm */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Hình ảnh sản phẩm */
+.productItem .imgWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.productItem .imgWrapper img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+    border-radius: 8px; /* Bo tròn góc cho hình ảnh */
+    transition: transform 0.2s ease-in-out;
+}
+
+.productItem:hover .imgWrapper img {
+    transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+}
+
+/* Thông tin sản phẩm */
+.productItem .info {
+    margin-top: 10px; /* Khoảng cách giữa hình ảnh và thông tin */
+}
+
+.productItem .info h4 {
+    font-size: 16px; /* Kích thước chữ tiêu đề sản phẩm */
+    color: #333; /* Màu chữ tiêu đề */
+    margin: 0; /* Bỏ margin mặc định */
+}
+
+.productItem .info .text-success {
+    color: #28a745; /* Màu xanh cho trạng thái 'Còn hàng' */
+}
+
+/* Giá sản phẩm */
+.productItem .beforePrice {
+    font-size: 14px; /* Kích thước chữ cho giá trước khi giảm */
+    color: #999; /* Màu xám cho giá đã giảm */
+    text-decoration: line-through; /* Gạch ngang */
+}
+
+.productItem .afterPrice {
+    font-size: 16px; /* Kích thước chữ cho giá sau khi giảm */
+    font-weight: bold; /* In đậm cho giá sau khi giảm */
+    color: rgb(255, 88, 88); /* Màu đỏ cho giá đã giảm */
+}
+
+/* Chỉ số giảm giá */
+.productItem .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff; /* Màu nền cho badge */
+    color: #fff; /* Màu chữ cho badge */
+    padding: 5px 10px; /* Padding cho badge */
+    border-radius: 5px; /* Bo tròn góc cho badge */
+}
+
+/* Nút yêu thích */
+.productItem .actions {
+    position: absolute;
+    top: 20px;
+    right: -100%; /* Bắt đầu ngoài khung nhìn */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.productItem:hover .actions {
+    right: 10px; /* Hiển thị khi hover */
+}
+
+.productItem .actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    border: 1px solid #a1a1a1;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Con trỏ khi hover */
+}
+
+.productItem .actions button:hover {
+    background: rgb(252, 64, 64); /* Màu nền khi hover */
+}
+
+.productItem .actions button svg {
+    color: #000; /* Màu chữ cho biểu tượng */
+    opacity: 0.8; /* Độ trong suốt */
+    font-size: 15px; /* Kích thước chữ cho biểu tượng */
+}
+
+/* Xóa gạch chân cho tất cả các thẻ a */
+a {
+    text-decoration: none; /* Không có gạch chân */
+}
+
+/* Xóa gạch chân cho tiêu đề, mô tả và các phần tử khác */
+.text-long,
+.beforePrice,
+.afterPrice,
+.text-success {
+    text-decoration: none; /* Không có gạch chân */
+}
+
+/* Nếu có lớp cụ thể cho các sản phẩm */
+.productItem {
+    text-decoration: none; /* Đảm bảo không có gạch chân trong toàn bộ sản phẩm */
+}
