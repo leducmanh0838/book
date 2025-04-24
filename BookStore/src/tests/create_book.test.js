@@ -9,7 +9,7 @@ let merchantToken;
 let merchantId;
 
 beforeAll(async () => {
-    await mongoose.connect('mongodb://localhost:27017/Test', {
+    await mongoose.connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });

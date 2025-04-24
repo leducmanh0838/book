@@ -5,7 +5,7 @@ import Book from '../models/book.model'; // Model Book của bạn
 
 beforeAll(async () => {
     // Kết nối đến MongoDB
-    await mongoose.connect('mongodb://localhost:27017/Test', {
+    await mongoose.connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });

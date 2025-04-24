@@ -1,3 +1,4 @@
+// npx jest --runInBand tests/*
 import request from 'supertest';
 import mongoose from 'mongoose';
 import app from '../index';
@@ -11,7 +12,7 @@ let userId;
 let bookId;
 
 beforeAll(async () => {
-    await mongoose.connect('mongodb://localhost:27017/Test', {
+    await mongoose.connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });

@@ -6,7 +6,7 @@ import bcrypt from 'bcrypt';
 
 beforeAll(async () => {
     // Kết nối đến MongoDB (có thể thay đổi URL phù hợp với cấu hình của bạn)
-    await mongoose.connect('mongodb://localhost:27017/Test', {
+    await mongoose.connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
