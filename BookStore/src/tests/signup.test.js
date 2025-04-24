@@ -60,6 +60,20 @@ describe('User Signup', () => {
         expect(response.body.message).toBe("User already exists");
     });
 
+    it('should return error if email is invalid', async () => {
+        const response = await request(app)
+            .post('/api/auth/signup')
+            .send({
+                email: 'invalidemail.com', // Email không hợp lệ
+                password: 'Password123!',
+                name: 'Test User',
+            });
+    
+        expect(response.statusCode).toBe(400);
+        expect(response.body.success).toBe(false);
+        expect(response.body.message).toBe("Invalid email format");
+    });
+
     it('should return error if email are missing', async () => {
         const response = await request(app)
             .post('/api/auth/signup')

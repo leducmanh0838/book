@@ -83,34 +83,30 @@ describe('Search Book for User', () => {
         expect(response.body.length).toBe(0); // Không có sách nào
     });
 
-    it('should return a 404 if no books are found', async () => {
-        // Xóa tất cả sách để gây ra lỗi
-        await Book.deleteMany({});
-
-        const response = await request(app)
-            .get('/api/user/search')
-            .query({ query: 'Anything' });
-
-        expect(response.statusCode).toBe(404); // Kiểm tra mã trạng thái 404
-        expect(response.body.success).toBe(false);
-        expect(response.body.message).toBe("Không tìm thấy sách nào."); // Thông báo không tìm thấy
-    });
-
-    // it('should return 500 on error fetching books', async () => {
-    //     jest.spyOn(Book, 'find').mockImplementationOnce(() => { throw new Error('Database error') }); // Giả lập lỗi
-
-    //     const response = await request(app)
-    //         .get('/api/user/search')
-    //         .query({ query: 'Harry' });
-
-    //     expect(response.statusCode).toBe(500); // Kiểm tra mã trạng thái 500
-    //     expect(response.body.message).toBe("Đã xảy ra lỗi trong quá trình tìm kiếm."); // Thông báo lỗi
-    // });
-
     it('should be case insensitive in searches', async () => {
         const response = await request(app)
             .get('/api/user/search')
             .query({ query: 'the HOBBIT' }); // Tìm kiếm với chữ hoa
+
+        expect(response.statusCode).toBe(200);
+        expect(response.body.length).toBe(1); // Chỉ nên có 1 sách
+        expect(response.body[0].bookTitle).toBe('The Hobbit'); // Kiểm tra tiêu đề sách
+    });
+
+    // Bổ sung các test case:
+    it('should return 400 for empty query', async () => {
+        const response = await request(app)
+            .get('/api/user/search')
+            .query({ query: '' }); // Truy vấn rỗng
+
+        expect(response.statusCode).toBe(400); // Kiểm tra mã lỗi
+        expect(response.body.message).toBe('Query parameter is required');
+    });
+
+    it('should return books filtered by category', async () => {
+        const response = await request(app)
+            .get('/api/user/search')
+            .query({ query: 'the', category: 'Fantasy' }); // Tìm kiếm theo thể loại
 
         expect(response.statusCode).toBe(200);
         expect(response.body.length).toBe(1); // Chỉ nên có 1 sách

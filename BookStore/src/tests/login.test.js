@@ -100,4 +100,40 @@ describe('User Login', () => {
         expect(response.body.success).toBe(false);
         expect(response.body.message).toBe('All fields are required');
     });
+
+    it('should return 400 for invalid email format', async () => {
+        const response = await request(app)
+            .post('/api/auth/login')
+            .send({
+                email: 'invalidemail.com', // Email không hợp lệ
+                password: 'Password123!'
+            });
+
+        expect(response.statusCode).toBe(400);
+        expect(response.body.success).toBe(false);
+        expect(response.body.message).toBe('Invalid email format');
+    });
+
+    it('should return 400 for unverified account', async () => {
+        // Giả sử bạn có trường hợp tài khoản chưa xác minh
+        const password = 'Password123!';
+        const hashedPassword = await bcrypt.hash(password, 8);
+        const newUser = await User.create({
+            email: 'unverified@example.com',
+            password: hashedPassword,
+            name: 'Unverified User',
+            isVerified: false, // Giả sử tài khoản này chưa được xác minh
+        });
+
+        const response = await request(app)
+            .post('/api/auth/login')
+            .send({
+                email: 'unverified@example.com',
+                password: 'Password123!'
+            });
+
+        expect(response.statusCode).toBe(400);
+        expect(response.body.success).toBe(false);
+        expect(response.body.message).toBe('Account not verified');
+    });
 });
